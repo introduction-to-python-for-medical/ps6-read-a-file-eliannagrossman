@@ -7,8 +7,9 @@ def create_codon_dict(file_path):
   lala={}
   for row in rows:
     row=row.strip().split('\t')
-    codon,amino=row[0],row[2]
-    lala[codon]=amino
+    if len(row)>=4:
+      codon,amino=row[0],row[2]
+      lala[codon]=amino
   return lala 
 
 
