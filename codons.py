@@ -1,7 +1,7 @@
 
 def create_codon_dict(file_path):
-  path = "/content/data/codons.txt"
-  file = open(path)
+  file_path = "/content/data/codons.txt"
+  file = open(file_path)
   rows = file.readlines()
   file.close()
   codon_dict={}
@@ -10,6 +10,7 @@ def create_codon_dict(file_path):
     if len(row)>=3:
       codon,amino=row[0],row[2]
       codon_dict[codon]=amino
-  return codon_dict
+  return codon_dict 
+
 
 
