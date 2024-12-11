@@ -4,12 +4,12 @@ def create_codon_dict(file_path):
   file = open(path)
   rows = file.readlines()
   file.close()
-  lala={}
+  codon_dict={}
   for row in rows:
     row=row.strip().split('\t')
-    if len(row)>=4:
+    if len(row)>=3:
       codon,amino=row[0],row[2]
-      lala[codon]=amino
-  return lala 
+      codon_dict[codon]=amino
+  return codon_dict
 
 
